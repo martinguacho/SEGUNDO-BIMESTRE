@@ -11,15 +11,16 @@ private static double total;
     
     //funcion salida de resultados
     public static void main(String[] args) {
-        double resultado, resultado2,resultado3;   
+        double resultado,resultado3;
+        int resultado2;
         resultado = calculoiva(354,iva);
         resultado2 = tipopersona();
-        resultado3 = descuentopersona(resultado,3);
+        resultado3 = descuentopersona(resultado,resultado2);
         System.out.println("El calculo total del IVA es: "+resultado3);
     }
     
     //pregunta si es una persona natural, publica o privada
-    public static double tipopersona(){
+    public static int tipopersona(){
         System.out.print("Digite (1) si es una persona NATURAL: \nDigite (2) si es una persona PUBLICA: \nDigite (3) si es una persona PRIVADA: ");
         int tipo = taller.nextInt();
         return tipo;
